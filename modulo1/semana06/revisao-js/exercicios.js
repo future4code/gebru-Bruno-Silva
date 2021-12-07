@@ -55,12 +55,19 @@ function retornaNPrimeirosPares(n) {
 
 // EXERCÍCIO 09
 function classificaTriangulo(ladoA, ladoB, ladoC) {
-
+    if(ladoA !== ladoB && ladoA !== ladoC && ladoB !== ladoC) {
+        return "Escaleno"
+    }
+    else if(ladoA !== ladoB && ladoA === ladoC || ladoB === ladoC && ladoB !== ladoA || ladoB === ladoA && ladoB !== ladoC) {
+        return "Isósceles"
+    }
+    else if(ladoA === ladoB && ladoA === ladoC)
+    return "Equilátero"
 }
 
 // EXERCÍCIO 10
 function retornaSegundoMaiorESegundoMenor(array) {
-  
+
 }
 
 // EXERCÍCIO 11
