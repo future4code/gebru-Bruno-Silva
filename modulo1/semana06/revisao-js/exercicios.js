@@ -31,7 +31,8 @@ function retornaNumerosParesElevadosADois(array) {
 
 // EXERCÍCIO 06
 function retornaMaiorNumero(array) {
-  
+  let maior = Math.max(...array)
+  return maior
 }
 
 // EXERCÍCIO 07
