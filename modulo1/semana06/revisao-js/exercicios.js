@@ -21,12 +21,18 @@ function retornaArrayOrdenado(array) {
 
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
-  
+    let array2 = []
+    for(let i of array) {
+        if(i % 2 === 0) {
+            array2.push(i)
+        }
+    }
+  return array2
 }
 
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
- 
+
 }
 
 // EXERCÍCIO 06
