@@ -1,0 +1,7 @@
+1 - Ter atenção no enunciado: é muito importante pois é do enunciado que iremos tirar as informações para desenvolver nossa lógica;
+2 - Retirar informações importantes: temos que ir direto ao ponto dentro do enunciado para filtrar o que interessa para o código;
+3 - Pensar em entradas e saídas: devemos fazer um código mental pensando nas primeiras soluções para iniciar a lógica;
+4 - Fazer um esquema visual: aqui devemos usar o esquema de fluxograma para entender o fluxo do código;
+5 - Criar código feio: aqui devemos criar o primeiro código com toda a lógica que conseguimos imaginar nos passos anteriores;
+6 - Testar Força-Bruta: aqui testamos o código da forma que ele está, vendo o que funciona e não funciona;
+7 - Refatorar: aqui é o momento de finalizar o código deixando-o com a melhor performance.
