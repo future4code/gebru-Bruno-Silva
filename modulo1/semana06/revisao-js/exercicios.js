@@ -150,5 +150,16 @@ function retornaArrayOrdenadoAlfabeticamente(consultas) {
 
 // EXERCÍCIO 15B
 function retornaArrayOrdenadoPorData(consultas) {
-   
+    moment.locale('pt')
+    const dataOrdem = (a, b) => {
+        d1 = moment(a.dataDaConsulta, "DD-MM-YYYY");
+        d2 = moment(b.dataDaConsulta, "DD-MM-YYYY");
+        if (d1.isAfter(d2)) {
+            return 1;
+        } else if (d1.isBefore(d2)) {
+            return -1;
+        }
+        return 0;
+    }
+   return consultas.sort(dataOrdem)
 }
