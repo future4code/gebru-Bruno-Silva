@@ -74,6 +74,7 @@ div img {
     background-color: #2274a5;
     color: white;
     padding-top: 80px;
+    list-style-position: inside;
 }
 
 #container-de-descricao>ol {
