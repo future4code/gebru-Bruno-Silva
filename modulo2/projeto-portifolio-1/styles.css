@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+html, body {
+    height: 100%;
+}
+
+.parent {
+    display: flex;
+}
+
+.barralateral {
+    width: 15%;
+    height: 100%;
+    position: fixed;
+    background-color: rgb(112, 112, 247);
+}
+
+.barralateral-pos {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.img-barralateral{text-align: center;}
+
+.img-barralateral img{
+    width: 80%;
+    border: 7px solid rgb(184, 184, 250);
+    border-radius: 50%;
+}
+
+.menu {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.menu a {
+    color: white;
+    opacity: 0.4;
+    font-size: 19px;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 20px;
+}
+
+#sobremenu {
+    opacity: 1;
+}
+
+.conteudo {
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    left: 20%;
+    overflow-y: auto;
+    padding: 0 3%;
+}
+
+section.descricao {
+    position: relative;
+    top: 50%;
+    transform:translateY(-50%);
+}
+
+.redes-icones img{
+    max-height: 4%;
+    max-width: 4%;
+}
+
+section.descricao h2 {
+    color:black;
+    font-size: 45px;
+}
+
+section.descricao p{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
