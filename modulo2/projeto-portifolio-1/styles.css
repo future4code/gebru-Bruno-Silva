@@ -52,6 +52,14 @@ html, body {
     opacity: 1;
 }
 
+#educ {
+    opacity: 1;
+}
+
+#exper {
+    opacity: 1;
+}
+
 .conteudo {
     width: 80%;
     height: 100%;
@@ -73,11 +81,28 @@ section.descricao {
 }
 
 section.descricao h2 {
-    color:black;
+    color:rgb(49, 49, 49);
     font-size: 45px;
+}
+
+section.descricao h3 {
+    color: rgb(49, 49, 49);
 }
 
 section.descricao p{
     margin-top: 40px;
     margin-bottom: 40px;
+    color: rgb(49, 49, 49);
+    font-size: 18px;
+}
+
+footer{
+    color: rgb(255, 255, 255);
+    font-family: open sans;
+    position: absolute;
+    bottom: 0;
+    width: 100vh;
+    text-align: center;
+    background-color: rgb(146, 146, 146);
+    border-radius: 20px; 
 }
