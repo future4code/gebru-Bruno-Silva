@@ -17,7 +17,7 @@ html, body {
     width: 15%;
     height: 100%;
     position: fixed;
-    background-color: rgb(112, 112, 247);
+    background-color: #186c9c;
 }
 
 .barralateral-pos {
@@ -30,7 +30,7 @@ html, body {
 
 .img-barralateral img{
     width: 80%;
-    border: 7px solid rgb(184, 184, 250);
+    border: 7px solid rgb(221, 227, 253);
     border-radius: 50%;
 }
 
@@ -60,6 +60,18 @@ html, body {
     opacity: 1;
 }
 
+#proje {
+    opacity: 1;
+}
+
+#redes {
+    opacity: 1;
+}
+
+#contato {
+    opacity: 1;
+}
+
 .conteudo {
     width: 80%;
     height: 100%;
@@ -78,6 +90,10 @@ section.descricao {
 .redes-icones img{
     max-height: 4%;
     max-width: 4%;
+}
+
+.redes-icones {
+    color: rgb(49, 49, 49);
 }
 
 section.descricao h2 {
@@ -105,4 +121,8 @@ footer{
     text-align: center;
     background-color: rgb(146, 146, 146);
     border-radius: 20px; 
+}
+
+.form{
+    
 }
