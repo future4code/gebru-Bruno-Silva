@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: left;
+    font-family: Roboto;
+}
+
+#linkhome {
+    color: rgb(235, 235, 235);
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: red;
+    color: rgb(235, 235, 235);
+    border-end-start-radius: 20px;
+    border-end-end-radius: 20px;
+    border: 5px solid rgba(226, 90, 0, 0.712);
+    grid-column: 1/-1;
+}
+
+header input {
+    margin-right: 10px;
+}
+
+header h2 {
+    margin-left: 10px;
+    padding: 20px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 50px;
+    column-gap: 20px;
+    margin: 10px;
+    padding: 50px 0px 50px 0px;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:white;
+    box-shadow: 0px 0px 5px rgb(19, 3, 3);
+    max-height: 250px;
+    height: 100vh;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.conteudo img {
+    width: 300px;
+    height: 200px;
+    padding: 8px;
+    border-radius: 13px;
+}
+
+body {
+    background-color: rgb(46, 46, 46);
+}
+
+
+.videos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    color:white;
+}
+
+
+@media screen and (min-device-width : 300px) and (max-device-width : 1335px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    }
+
+
+@media screen and (min-device-width : 200px) and (max-device-width : 392px) {
+     header h2 {
+        font-size: 18px;
+    }
+    
+    }
+
+
+@media screen and (min-device-width : 100px) and (max-device-width : 699px) {
+    .video {
+        width: 360px;
+        height: 200px;
+    }
+}
+
+@media screen and (min-device-width : 700px) and (max-device-width : 1000px) {
+    .video {
+        width: 750px;
+        height: 420px;
+    }
+}
+
+footer {
+    display: grid;
+    background-color: rgb(22, 7, 7);
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    color: rgb(158, 134, 134);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
