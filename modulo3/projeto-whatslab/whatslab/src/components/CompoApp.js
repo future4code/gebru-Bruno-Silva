@@ -3,10 +3,18 @@ import styled from 'styled-components';
 
 const EstilosContainer = styled.div`
     display: flex;
-    flex-direction: row;
+    position: fixed;
+`
+const EstiloMensagens = styled.div `
+    height: 87vh;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    padding: 10px;
 `
 const InputMensagem = styled.div`
-
+    
 `
 const InputNome = styled.div`
     width: 80px;
@@ -27,7 +35,7 @@ class CompoApp extends React.Component {
 
     adicionaMensagem = () => {
         const novaMensagem = {
-            nome: this.state.valorInputNome,
+            nome:`${this.state.valorInputNome}:`,
             mensagem: this.state.valorInputMensagem
         };
         const novaMensagens = [...this.state.mensagens, novaMensagem];
@@ -56,6 +64,7 @@ class CompoApp extends React.Component {
   
       return (
         <div>
+            <EstiloMensagens>{listaDeMensagens}</EstiloMensagens>
             <EstilosContainer>
             <InputNome>
             <input 
@@ -72,11 +81,7 @@ class CompoApp extends React.Component {
             />
             </InputMensagem>
             <button onClick={this.adicionaMensagem}>Enviar</button>
-
             </EstilosContainer>
-
-            <div>{listaDeMensagens}</div>
-
         </div>
       );
   
