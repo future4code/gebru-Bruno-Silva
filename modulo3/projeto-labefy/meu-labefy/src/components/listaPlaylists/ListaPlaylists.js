@@ -45,7 +45,7 @@ export default class ListaPlaylists extends React.Component {
   render() {
 
     const playlistsComponents = this.state.playlists.map((playlist) => {
-      return <li key={playlist.id}> <button onClick={this.props.goToTelaDetalhePlaylist}>+</button> {playlist.name} <button onClick={() => this.deletePlaylist(playlist.id)}>Deletar Playlist</button> </li>
+      return <li key={playlist.id}> <button onClick={() => this.props.goToTelaDetalhePlaylist(playlist.id)}>+</button> {playlist.name} <button onClick={() => this.deletePlaylist(playlist.id)}>X</button> </li>
   });
 
     return (
