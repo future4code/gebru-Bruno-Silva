@@ -1,6 +1,34 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import styled from 'styled-components';
+import Button from '@mui/material/Button';
+
+const EstiloHome = styled.div `
+  display: grid;
+  text-align: center;
+  align-items: center;
+  padding: 100px;
+`
+const EstiloButtonHome = styled.div `
+  position: fixed;
+`
+const Container = styled.div `
+  
+  @media screen and (min-device-width : 320px) and (max-device-width : 850px) {
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      margin: 10px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      img {
+      border-radius: 50px;
+      width: 200px;
+      height: 250px;
+      }
+  }
+`  
 
 const Home = (props) => {
 
@@ -54,27 +82,27 @@ useEffect(() => {
 
 
   return (
-
-    <div>
-        <button onClick={props.goToTelaMatches}>Matches</button>
+    <Container>
+        <EstiloButtonHome>
+        <Button onClick={props.goToTelaMatches} variant="contained" color="primary" >Seus Matches</Button>
+        </EstiloButtonHome>
+        <EstiloHome>
         { profileToChoose ? 
         <div>
             <p>
-                <img src={profileToChoose.photo} />
+            <Button onClick={() => choosePersonDeslike(profileToChoose.id)} variant="contained" color="error" >Não Gostei</Button>
+            <img src={profileToChoose.photo} />
+            <Button onClick={() => choosePersonLike(profileToChoose.id)} variant="contained" color="success" >Gostei!</Button>
             </p>
             <p>
-                {profileToChoose.name}
+                {profileToChoose.name}, {profileToChoose.age} anos.
             </p>
             <p>
-                {profileToChoose.age}
+                "{profileToChoose.bio}"
             </p>
-            <p>
-                {profileToChoose.bio}
-            </p>
-        </div> : 'Carregando...' }
-        <button onClick={() => choosePersonDeslike(profileToChoose.id)}>X</button>
-        <button onClick={() => choosePersonLike(profileToChoose.id)}>V</button>
-    </div>
+        </div> : <p> Carregando... </p>}
+        </EstiloHome>
+    </Container>
   );
 }
 

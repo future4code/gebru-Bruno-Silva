@@ -1,6 +1,52 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import styled from 'styled-components';
+import Button from '@mui/material/Button';
+
+const ListaMatches = styled.div`
+    width: 400px;
+    height: 600px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 0px solid black;
+    cursor: pointer;
+  img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    vertical-align: middle;
+  }
+`
+const EstiloButtonMatches = styled.div `
+  position: fixed;
+
+  @media screen and (min-device-width : 320px) and (max-device-width : 850px) {
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+`
+
+const Container = styled.div `
+    @media screen and (min-device-width : 320px) and (max-device-width : 850px) {
+      height: 100vh;
+      position: fixed;
+      margin: 10px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      img {
+      border-radius: 50px;
+      width: 40px;
+      height: 40px;
+      }
+  }
+`
 
 const Matches = (props) => {
 
@@ -28,12 +74,14 @@ const Matches = (props) => {
     })
 
   return (
-    
-    <div>
-      
-      <button onClick={props.goToTelaInicial}>Home</button>
+    <Container>
+      <EstiloButtonMatches>
+      <Button onClick={props.goToTelaInicial} variant="contained" color="primary" >Início</Button>
+      </EstiloButtonMatches>
+      <ListaMatches>
       {newMatches}
-    </div>
+      </ListaMatches>
+    </Container>
   );
 }
 
