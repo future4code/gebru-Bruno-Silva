@@ -1,10 +1,11 @@
 import React from "react";
+import { Router } from "./routes/Router";
 
-function App() {
+const App = () => {
   return (
     <div>
       <header>
-        LabeX
+        <Router />
       </header>
     </div>
   );

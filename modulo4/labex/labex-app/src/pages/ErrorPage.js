@@ -1,13 +1,13 @@
 import React from "react";
 
-const LoginPage = () => {
+const ErrorPage = () => {
   return (
     <div>
       <header>
-        LoginPage
+        ErrorPage
       </header>
     </div>
   );
 }
 
-export default LoginPage;
+export default ErrorPage;
