@@ -22,8 +22,6 @@ const TripDetailsPage = () => {
     .catch((err) => err.response);
   }, []);
 
-  // localStorage.removeItem("token")
-
   return (
     <div>
       <header>

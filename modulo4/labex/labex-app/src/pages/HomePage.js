@@ -15,7 +15,7 @@ const HomePage = () => {
 
   return (
     <div>
-        HomePage
+        <p>LabeX</p>
         <button onClick={goToListTripsPage}>Lista de viagens</button>
         <button onClick={goToAdminHomePage}>Área administrativa</button>
     </div>
