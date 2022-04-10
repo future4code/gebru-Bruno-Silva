@@ -1,7 +1,7 @@
 import { React, useState, useEffect } from "react";
 import axios from "axios";
 import { useProtectedPage } from "../hooks/useProtectedPage";
-import { goToHomePage, goToCreateTripPage } from "../routes/coordinator";
+import { goToHomePage, goToCreateTripPage, goToTripDetails } from "../routes/coordinator";
 import { useNavigate } from "react-router-dom";
 
 const AdminHomePage = () => {
@@ -26,10 +26,33 @@ const AdminHomePage = () => {
     .catch((err) => err.response);
   }, []);
 
-  const listTrips =  trips.map((trip) => {
+  const deletTrip = (id) => {
+    const URL = `https://us-central1-labenu-apis.cloudfunctions.net/labeX/bruno/trips/${id}`
+    const token = localStorage.getItem("token")
+    const headers = {
+      headers: {
+        auth: localStorage.getItem("token")
+      }
+    };
+
+    axios
+      .delete(URL, headers)
+      .then((res) => {
+        alert("Viagem Deletada!")
+
+        })
+      .catch((err) => {
+        alert(err.response)
+        })
+      }
+  
+
+  const listTrips = trips.map((trip) => {
     return <li key={trip.id}> 
-        <b>Nome: </b>{trip.name}
-      </li>
+            <button onClick={() => goToTripDetails(navigate)}>Detalhes</button>
+            <b>Nome: </b>{trip.name} 
+            <button onClick={() => deletTrip(trip.id)}>Deletar</button>
+          </li>
   })
 
   return (
