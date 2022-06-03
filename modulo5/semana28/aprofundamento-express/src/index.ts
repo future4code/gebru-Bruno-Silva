@@ -1,0 +1,6 @@
+/* UNION TYPE */
+/* TYPE ALIASES */
+/* TYPE + UNION */
+/* INTERSECTION TYPE */
+/* TYPE INFERENCE */
+/* ENUM */
