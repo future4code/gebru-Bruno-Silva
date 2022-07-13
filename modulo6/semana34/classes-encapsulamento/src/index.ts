@@ -1,0 +1,1 @@
+// Exercício 1 a) Um construtor serve para instanciar objetos da classe na qual esse construtor foi definido. Para chamá-lo só usar a palavra reservada "constructor".
